@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="../css/main.css">
+  <link rel="stylesheet" type="text/css" href="../css/design.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <title>ZIP CIPHER</title>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <section id="header">
+    <div>
+      <div class="logo">
+        <a href="../index.html" class="logo">&#169;&#237;&#960;h&#234;&#174; M&#235;</a>
+      </div>
+      <div class="options">
+        <a href="design.html" class="options active"><i class="fas fa-cogs"></i></a>
+        <a href="zip.html" class="options">Zip</a>
+        <a href="polyalphabeticCipher.html" class="options">Polyalphabetic Cipher</a>
+        <a href="enigma.html" class="options"><span>&Sigma;</span>nigma</a>
+      </div>
+    </div>
+  </section>
+  <!-- PAGE TITLE -->
+  <div class="title">
+    <h1>Design Document</h1>
+  </div>
+  <!-- DOCUMENT'S MAIN SECTION -->
+  <div id="mainSection">
+    <div class="subsection">
+      <p>The purpose of this document is to demonstrate the typographical and presentational elements used in this site. It will allow the future administrator of the site to easily add new pages that will match the original theme. </p>
+    </div>
+    <div class="wrapper2 subsection">
+      <h3>Font Family & Font Colour</h3>
+      <p>The font that has been used throughout this project is <span class="fant-font">fantasy</span>. As the main colour in the project is dark purple, the font colour is white to make the text more visible. The only element that uses black font on white background is modal.</p>
+    </div>
+    <div class="wrapper2 subsection">
+      <h3>Background and Colours</h3>
+      <p>I have used a photo by Nathan Anderson on <a href="https://unsplash.com/@nathananderson">Unsplash</a> as a background. It is a picture of stars at night which matches the dark navbar and black footer. It also goes well with the font color and family. The primary colour used is dark purple (#1b122b, rgb(27,18,43)) which is used not only in navbar, but also in controls' opaque background.</p>
+    </div>
+    <div class="wrapper2 subsection">
+      <h3>Navbar</h3>
+      <p>
+        Each page in the the project contains a navbar that allows easy navigation between different pages. The navbar has a botom white, slightly opaque border which gently seperates it from the rest of the page. The CSS attributes for the navbar are contained in #header. On the left hand side of the navbar there is a logo that contains a link to the home page, attributes to this element are containted in 'logo' class. On the right hand side there are links to 3 ciphers and to the design document page. Cogs icon form Font Awesome has been used for the design document. The page that is displaying at any time is indicated by a lighter background in the navbar menu. At any point the user knows exactly where he/she is. Additionally a hover effect is added to each menu option that changes the background to a colour of an active class. A new cipher page link added to the navbar would require 'options' class to be added, as well as the 'active' class in the html document for this particular cipher.
+      </p>
+    </div>
+    <div class="wrapper2 subsection">
+      <h3>Footer</h3>
+      <p>Each page also contains a black(#111) footer which is fixed to the bottom. All the attributes are contained in a 'footer' class. The footer is seperating the page from the bottom of the screen and has no other function at the moment. In the future links can be added to, for example, social media account of the creator.</p>
+    </div>
+    <div class="wrapper2 subsection">
+      <h3>Home Page</h3>
+      <p>The home page consists of only two elements. The animated logo which is in the middle of the screen. When the home page is opened the letters of the logo fly in from different positions to the centre of the screen. They also transition from invisible to fully visible. This is acheieved by removing a 'hidden' class when the page loades. The font size used is 100px with text shadow effect. Below the logo ther is a short paragraph describing the content of the website. The paragraph is also animated, it becomes visible when the logo gets into its position.</p>
+    </div>
+    <div class="wrapper2 subsection">
+      <h3>Cipher Page Elements</h3>
+      <div>
+        <p>Each page contains an animated title which moves from outside of the screen on the left to the middle. The animation works by removing a 'hidden' class. It it a h1 with a 'title' class. The class gives it font size of 25px, text schadow and 4px scacing between letters.</p>
+        <p>Underneath there is an area that is divided into two parts. The first part, on the left hand side, takes two thirds of the space and contains boxes and buttons used to cipher and decipher messages. The right hand side part takes a third of the space and contains a description of the cipher. This has been implemented by creating a 'wrapper' class that uses a grid display with 2 columns (2fr and 1rf). To list the steps in the process bullet points (unordered list) are used. </p>
+      </div>
+    </div>
+    <div class="wrapper2 subsection">
+      <div>
+        <h3>Input Box</h3>
+        <div class="exampleContainer inOut">
+          <input type="text" placeholder=" Example Input" class="inOut">
+        </div>
+      </div>
+      <p>The input boxes have an opaque background (rgba(27,18,43, 0.5)) which allows the page background to be seen. It has rounded corners and white opaque border. The text colour is also white. The attributes have been changed in the CSS document for all the inputs. The blue outline has been removed and is not showing when the input is active.</p>
+    </div>
+    <div class="wrapper2 subsection">
+      <div>
+        <h3>Select Box</h3>
+        <div class="exampleContainer inOut">
+          <select id="rotor1pos">
+            <option value="a">a</option>
+            <option value="b">b</option>
+            <option value="c">c</option>
+            <option value="d">d</option>
+            <option value="e">e</option>
+            <option value="f">f</option>
+            <option value="g">g</option>
+            <option value="h">h</option>
+            <option value="i">i</option>
+            <option value="j">j</option>
+            <option value="k">k</option>
+            <option value="l">l</option>
+            <option value="m">m</option>
+            <option value="n">n</option>
+            <option value="o">o</option>
+            <option value="p">p</option>
+            <option value="q">q</option>
+            <option value="r">r</option>
+            <option value="s">s</option>
+            <option value="t">t</option>
+            <option value="u">u</option>
+            <option value="v">v</option>
+            <option value="w">w</option>
+            <option value="x">x</option>
+            <option value="y">y</option>
+            <option value="z">z</option>
+          </select>
+        </div>
+      </div>
+      <p>The select box is styled in a similar way as input box. The background is opaque and the text colour is white. The box has rounded white border and the outline has been disabled. The attributes have been changed in the CSS document for all select boxes. The font size in the select box is 20px.</p>
+    </div>
+    <div class="wrapper2 subsection">
+      <div>
+        <h3>Button</h3>
+        <div class="exampleContainer inOut">
+          <button>Example Button</button>
+        </div>
+      </div>
+      <p>
+        As the above inputs the button has been styled in a similar way. Opaque background, rounded white border and white text. The text font for the button is <span class="fant-font">fantasy</span>. There is an animation element added to this control. When hovered over the box shadow decreases and it disapears when it is clicked. The button position also moves a bit down giving it an impression of a button being pressed in. The button style has been changed in the CSS document therefore all buttons used in the project will have the same styling.
+      </p>
+    </div>
+    <div class="wrapper2 subsection">
+      <div>
+        <h3>Textarea</h3>
+        <div class="exampleContainer inOut">
+          <textarea name="name" rows="8" cols="80" placeholder="Example"></textarea>
+        </div>
+      </div>
+      <p>
+        As the above controls the textarea has been styled in a similar way. Opaque background, rounded white border and white text.  The textarea style has been changed in the CSS document therefore all controls of this type used in the project will have the same styling. Placeholders have been used to indicate 'Input' and 'Output' controls.
+      </p>
+    </div>
+    <div class="wrapper2 subsection">
+      <div>
+        <h3>Modal</h3>
+        <div class="exampleContainerLarge inOut">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1>Modal Example</h1>
+            <p>This is an example of a modal.</p>
+
+          </div>
+        </div>
+      </div>
+      <p>
+        Modal is styled as a white box. The title in the box is h1 and all other text is in paragraphs. The text color is black and the font family is <span class="fant-font">fantasy</span>. The close button is animated. It gets darker when hovered over.
+      </p>
+    </div>
+  </div>
+
+
+
+
+  <div class="footer">
+
+  </div>
+
+  <script type="text/javascript" src="../js/main.js"></script>
+</body>
+</html>
