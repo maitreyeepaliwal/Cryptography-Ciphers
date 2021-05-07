@@ -1,0 +1,47 @@
+#mainSection{
+  background: white;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 100px;
+  color: black;
+  font-family: sans-serif;
+
+}
+
+.subsection{
+  margin:15px;
+  padding: 10px;
+}
+/* a class dividing a containter into 2 sections used in design document */
+.wrapper2{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  border-bottom: 2px solid rgba(27,18,43, 0.1);
+}
+
+/* class to display fantasy font */
+.fant-font{
+  font-family: fantasy;
+}
+
+/* container for controls added background so they can look like on the website */
+.exampleContainer{
+  padding: 10px;
+  width: 250px;
+  height: 50px;
+  background-image: url("../src/nathan-anderson.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+/* as above but a larger container */
+.exampleContainerLarge{
+  padding: 10px;
+  width: 250px;
+  height: 250px;
+  background-image: url("../src/nathan-anderson.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+
+}
