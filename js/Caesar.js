@@ -1,45 +1,30 @@
-var caesarShift = function (message, enteredKey) {
-    
-    if (enteredKey < 0) {
-      return caesarShift(message, enteredKey+ 26);
-    }
-  
-    // Make an output variable
-    var output = "";
-  
-    
-    // Go through each character
-    for (var i = 0; i < message.length; i++) {
-        var c;
-        // Get its code
-        var code = (message.charCodeAt(i)); 
-  
-        // Uppercase letters
-        if (code >= 65 && code <= 90) {
-          c = String.fromCharCode(((code - 65 + parseInt(enteredKey)) % 26) + 65);
-        }
-  
-        // Lowercase letters
-        else if (code >= 97 && code <= 122) {
-          c = String.fromCharCode(((code - 97 + parseInt(enteredKey)) % 26) + 97);
-          
-        }
-        output += c;
-    }
-    
-    return output;
+var caesarShiftencrypt = function (plaintext, enteredKey) {
+   ciphertext = "";   
+    var re = /[a-z]/;
+  for(i=0; i<plaintext.length; i++){ 
+      if(re.test(plaintext.charAt(i))) ciphertext += String.fromCharCode((plaintext.charCodeAt(i) - 97 + enteredKey)%26 + 97); 
+      else ciphertext += plaintext.charAt(i); 
+  } 
+  return ciphertext; 
 }
   
-
+var caesarShiftdecrypt = function (ciphertext, enteredKey) {
+plaintext = "";    var re = /[a-z]/;
+for(i=0; i<ciphertext.length; i++){ 
+    if(re.test(ciphertext.charAt(i))) plaintext += String.fromCharCode((ciphertext.charCodeAt(i) - 97 + 26 - enteredKey)%26 + 97); 
+    else plaintext += ciphertext.charAt(i); 
+} 
+return plaintext; 
+}
 
 function caesarcipherButtonFunction(){
-    var enteredKey = document.getElementById('enteredKey').value;
-    var message = document.getElementById('inputMessage').value;
+    var enteredKey = parseInt(document.getElementById("enteredKey").value);
+    var message = document.getElementById('inputMessage').value.toLowerCase();;
     if(enteredKey == "" || message == ""){
         alert("Please enter key and message to de ciphered/deciphered!");
         return;
       }
-    var result = caesarShift(message, enteredKey);
+    var result = caesarShiftencrypt(message, enteredKey);
     document.getElementById('result').value = result;
 }
 
@@ -50,6 +35,6 @@ function caesardecipherButtonFunction(){
         alert("Please enter key and message to de ciphered/deciphered!");
         return;
       }
-    var result = caesarShift(message, parseInt(-enteredKey));
+    var result = caesarShiftdecrypt(message, enteredKey);
     document.getElementById('result').value = result;
 }
