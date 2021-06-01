@@ -48,18 +48,6 @@ function decrypt(ciphertext, keysquare, period)
     return plaintext;
 }
 
-function GenRandKey(){
-    var keychars = "abcdefghiklmnopqrstuvwxyz";
-    var chars = keychars.split("");
-    ret=""; lim = chars.length
-    for(i=0; i<lim; i++){
-        index = Math.floor(chars.length*Math.random());
-        ret += chars[index];
-        chars.splice(index,1);
-    } 
-    document.getElementById("keysquare").value = ret;
-}
-
 function cipherButtonFunction(){
     var enteredKey = document.getElementById('enteredKey').value.toLowerCase().replace(/[^a-z]/g, "");
     var message = document.getElementById("inputMessage").value.toLowerCase().replace(/[^a-z]/g, "").replace(/[j]/g, "i"); 
