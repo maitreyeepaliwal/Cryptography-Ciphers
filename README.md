@@ -36,6 +36,7 @@ cryptography and understanding the ways to ensure a safe secure communication.
 
 *For the code, I acknowledge to have used some Github repos and other resources for understanding of the algorithms and getting information about them. The objective behind implementing this project was to provide an attractive interface to a wide range of ciphers.*  
 <br/>
-<br/>
 ### :christmas_tree: *ISSUES, PULL REQUESTS AND FORKS ARE ALWAYS WELCOME.*
 ### :star: Please consider leaving a star on this repo if you like this work. 
+<br/>
+## The UI for this project was done by [Rishita Reddy Chilla](https://github.com/RishitaReddyChilla)
